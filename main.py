@@ -8,4 +8,11 @@ print(r.status_code)
 
 
 def test_correct_status_code():
-    assert status_code == 200
+    posts = base_url + "posts"
+    get_posts = requests.get(posts)
+    print(get_posts.text)
+    assert get_posts.status_code == 200
+
+
+def test_correct_add_post():
+    pass
